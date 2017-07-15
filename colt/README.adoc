@@ -3,3 +3,7 @@ Spring Colt
 
 Spring on Kotlin experiences ...
 
+References
+----------
+- Kotlin language reference, _https://kotlinlang.org/docs/reference/_
+

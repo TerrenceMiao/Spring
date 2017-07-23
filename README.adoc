@@ -3,3 +3,11 @@ Spring Reborn
 
 Dedicated to the latest reborn of Spring Framework ...
 
+Kotlin and Spring Boot
+----------------------
+
+image::Json%20Object.png[JSON Object written in Kotlin]
+
+image::RESTful%20Controller.png[Spring Boot RESTful Controller written in Kotlin]
+
+

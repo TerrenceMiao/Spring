@@ -1,0 +1,52 @@
+info:
+  app:
+    name: Spring Boot Example Application with Retrofit and OKHttp
+    description: This is spring boot application demonstrating Retrofit and OKHttp
+    version: 1.0.0
+
+management:
+  info.git.mode: full
+  endpoint.health.show-details: always
+  endpoint.info.show-details: always
+
+proxy:
+  host:
+  port: -1
+  username:
+  password:
+
+orchestration-api.service:
+  endpoint:
+  api-key:
+  overall-timeout: "PT15S"
+  cache-expiry: "PT1H"
+  failure-threshold: 5
+  sleep-window: "PT1M"
+  whitelist: "\\/_admin\\/health"
+  httpclient:
+    logger-name: "Orchestration API"
+    connection-pool:
+      max-idle-connections: 0
+      keep-alive: PT15S
+    http-request-config:
+      connect-timeout: "PT15S"
+      socket-timeout: "PT15S"
+      write-timeout: "PT15S"
+      redirects-enabled: false
+    dispatcher:
+      core-pool-size: 0
+      max-pool-size: 2147483647
+      name-prefix: OrchestrationDispatcher
+      keep-alive: "PT60S"
+      max-requests: 50
+      max-requests-per-host: 50
+
+api-gateway.service:
+  endpoint:
+  credentials:
+    admin:
+      username:
+      password:
+    master:
+      username:
+      password:

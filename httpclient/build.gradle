@@ -1,0 +1,43 @@
+plugins {
+	id 'org.springframework.boot' version '2.4.5'
+	id 'io.spring.dependency-management' version '1.0.11.RELEASE'
+	id 'java'
+	id 'war'
+
+	// lombok annotation processor
+	id "io.freefair.lombok" version '5.3.3.3'
+}
+
+group = 'org.paradise.net'
+version = '1.0.0-SNAPSHOT'
+sourceCompatibility = '11'
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	implementation 'org.springframework.boot:spring-boot-starter-actuator'
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+
+  	developmentOnly 'org.springframework.boot:spring-boot-devtools'
+
+	providedRuntime 'org.springframework.boot:spring-boot-starter-tomcat'
+
+	implementation group: 'com.squareup.retrofit2', name: 'retrofit', version: '2.9.0'
+	implementation group: 'com.squareup.retrofit2', name: 'converter-jackson', version: '2.9.0'
+	implementation group: 'com.squareup.okhttp3', name: 'okhttp', version: '4.9.1'
+	implementation group: 'com.squareup.okhttp3', name: 'logging-interceptor', version: '4.9.1'
+
+	implementation group: 'com.google.guava', name: 'guava', version: '30.1.1-jre'
+
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+}
+
+test {
+	useJUnitPlatform()
+}
+
+bootRun {
+	systemProperties['spring.profiles.active'] = System.properties.get('spring.profiles.active', 'local')
+}

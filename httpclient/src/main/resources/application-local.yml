@@ -1,14 +1,14 @@
 orchestration-api.service:
-  endpoint: "https://digitalapi-stest.npe.auspost.com.au/"
+  endpoint: "https://digitalapi.paradise.net/"
 
 api-gateway.service:
-  endpoint: "https://digitalapi-stest.npe.auspost.com.au/"
+  endpoint: "https://digitalapi.paradise.net/"
   credentials:
     admin:
       username: health
-      password: dontgopostal!!
+      password: Somewhere over the rainbow way up high
     master:
       username: health
-      password: dontgopostal!!
+      password: Somewhere over the rainbow way up high
 
 logging.level.org.paradise.net: DEBUG

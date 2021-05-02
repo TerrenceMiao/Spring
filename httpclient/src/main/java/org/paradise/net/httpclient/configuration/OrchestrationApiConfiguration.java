@@ -73,7 +73,7 @@ public class OrchestrationApiConfiguration {
         return httpclient;
     }
 
-    @Bean
+    @Bean(destroyMethod="")
     public OrchestrationApi orchestrationApi(Converter.Factory converterFactory) {
 
         okHttpClientBuilder = new OkHttpClient.Builder()

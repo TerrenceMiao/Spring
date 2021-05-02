@@ -17,5 +17,5 @@ public interface OrchestrationApi {
     );
 
     @OPTIONS("<empty>")
-    CloseApiClientResponse close();
+    Call<CloseApiClientResponse> close();
 }

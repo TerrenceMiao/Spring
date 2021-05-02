@@ -6,6 +6,9 @@ plugins {
 
 	// lombok annotation processor
 	id "io.freefair.lombok" version '5.3.3.3'
+
+	// Wiremock
+	id 'com.github.william-hill-online.wiremock' version '0.4.3'
 }
 
 group = 'org.paradise.net'
@@ -32,6 +35,8 @@ dependencies {
 	implementation group: 'com.google.guava', name: 'guava', version: '30.1.1-jre'
 
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+
+	testImplementation group: 'com.github.tomakehurst', name: 'wiremock-standalone', version: '2.27.2'
 }
 
 test {
@@ -40,4 +45,10 @@ test {
 
 bootRun {
 	systemProperties['spring.profiles.active'] = System.properties.get('spring.profiles.active', 'local')
+	runWithWiremock = true
+}
+
+wiremock {
+	dir "$projectDir/src/stub/resources/"
+	params "--port=8081 --verbose"
 }

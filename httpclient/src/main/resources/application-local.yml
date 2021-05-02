@@ -1,8 +1,8 @@
 orchestration-api.service:
-  endpoint: "https://digitalapi.paradise.net/"
+  endpoint: "http://localhost:8081/"
 
 api-gateway.service:
-  endpoint: "https://digitalapi.paradise.net/"
+  endpoint: "http://localhost:8081/"
   credentials:
     admin:
       username: health

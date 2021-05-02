@@ -1,0 +1,32 @@
+{
+  "request": {
+    "method": "GET",
+    "url": "/digitalworkspace/orchestration/v1/health"
+  },
+  "response": {
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "status": 200,
+    "jsonBody": {
+      "status": "UP",
+      "learningApi": {
+        "status": "UP",
+        "detail": "200 OK"
+      },
+      "redis": {
+        "status": "UP"
+      },
+      "sapApi": {
+        "status": "UP",
+        "detail": "200 OK"
+      },
+      "diskSpace": {
+        "status": "UP",
+        "total": 10430222336,
+        "free": 7547510784,
+        "threshold": 10485760
+      }
+    }
+  }
+}

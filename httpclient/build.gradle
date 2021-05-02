@@ -38,7 +38,8 @@ dependencies {
 	//
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 
-	testImplementation group: 'org.spockframework', name: 'spock-core', version: '2.0-M5-groovy-2.5'
+	testImplementation group: 'org.codehaus.groovy', name: 'groovy', version: '3.0.7'
+	testImplementation group: 'org.spockframework', name: 'spock-core', version: '2.0-M5-groovy-3.0'
 
 	testImplementation group: 'com.github.tomakehurst', name: 'wiremock-standalone', version: '2.27.2'
 }

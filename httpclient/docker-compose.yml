@@ -1,0 +1,11 @@
+version: '3'
+services:
+  httpclient:
+    image: "jtech/httpclient"
+    build:
+      context: .
+      args:
+        SNYK_TOKEN:
+        BUILD_BRANCH:
+    ports:
+      - "8080:8080"

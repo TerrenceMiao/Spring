@@ -9,14 +9,24 @@ import org.springframework.context.annotation.Configuration;
 @ToString
 public class HttpClientConfiguration {
 
-    private HttpRequestConfiguration httpRequestConfiguration;
     private String loggerName;
+    private ConnectionPoolConfiguration connectionPool;
+    private HttpRequestConfiguration httpRequestConfig;
+    private DispatcherConfiguration dispatcher;
 
     public String loggerName() {
         return loggerName;
     }
 
-    public HttpRequestConfiguration request() {
-        return httpRequestConfiguration;
+    public ConnectionPoolConfiguration connectionPool() {
+        return new ConnectionPoolConfiguration();
+    }
+
+    public HttpRequestConfiguration httpRequestConfig() {
+        return new HttpRequestConfiguration();
+    }
+
+    public DispatcherConfiguration dispatcher() {
+        return new DispatcherConfiguration();
     }
 }

@@ -1,3 +1,9 @@
+# Bean overriding has been disabled by default to prevent a bean being accidentally overridden in latest Spring Boot.
+# org.springframework.beans.factory.support.BeanDefinitionOverrideException: Invalid bean definition
+spring:
+  main:
+    allow-bean-definition-overriding: true
+
 info:
   app:
     name: Spring Boot Example Application with Retrofit and OKHttp

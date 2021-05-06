@@ -65,6 +65,7 @@ public class OrchestrationApiConfiguration {
         return () -> "TimeoutMonitor-";
     }
 
+    @Bean
     public ProxyConfiguration proxyConfiguration() {
         return new ProxyConfiguration();
     }
@@ -100,6 +101,7 @@ public class OrchestrationApiConfiguration {
                 .create(OrchestrationApi.class);
     }
 
+    @Bean
     public Proxy proxy() {
 
         if (proxyConfiguration().hasProxy()) {

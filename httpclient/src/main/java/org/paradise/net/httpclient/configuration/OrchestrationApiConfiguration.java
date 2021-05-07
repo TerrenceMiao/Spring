@@ -78,6 +78,7 @@ public class OrchestrationApiConfiguration {
     public OrchestrationApi orchestrationApi(Converter.Factory converterFactory) {
 
         okHttpClientBuilder = new OkHttpClient.Builder()
+                .cache(null)
                 .connectTimeout(overallTimeout().getSeconds(), TimeUnit.SECONDS)
                 .readTimeout(15, TimeUnit.SECONDS)
                 .addInterceptor(new Slf4jLoggingInterceptor(log))
